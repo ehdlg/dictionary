@@ -25,27 +25,29 @@ import { PlayButtonComponent } from '../play-button/play-button.component';
     @for(meaning of data.meanings; track meaning.partOfSpeech){
     <div class="flex gap-6 items-center justify-between mt-4">
       <p class="font-bold text-xl">{{ meaning.partOfSpeech }}</p>
-      <div class="w-full h-[1px] bg-gray-200"></div>
+      <div class="w-full h-[1px] bg-slate-200 dark:bg-slate-700"></div>
     </div>
     <ul
       class="flex flex-col gap-4 text-xl list-disc m-6  text-gray-700 mx-auto"
     >
-      <p class="text-gray-500">Meaning</p>
+      <p class="text-slate-600 dark:text-slate-400 ">Meaning</p>
       @for(definition of meaning.definitions; track definition.definition){
       <li class="pl-2 text-purple-500">
-        <span class="text-gray-700">{{ definition.definition }}</span>
+        <span class="text-slate-700 dark:text-slate-300">{{
+          definition.definition
+        }}</span>
       </li>
       }
     </ul>
 
     }
-    <div class="h-[1px] bg-gray-200 w-full my-6"></div>
-    <p class="text-gray-600">
+    <div class="h-[1px] bg-slate-200 dark:bg-slate-700 w-full my-6"></div>
+    <p class="text-slate-600 dark:text-slate-400">
       Source:
       <a
         [href]="data.sourceUrls[0]"
         target="_blank"
-        class="underline cursor-pointer"
+        class="underline cursor-pointer dark:text-slate-400 text-slate-600"
         >{{ data.sourceUrls[0] }}</a
       >
     </p>
