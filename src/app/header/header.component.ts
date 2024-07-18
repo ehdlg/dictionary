@@ -1,14 +1,15 @@
 import { Component, EventEmitter, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { EventType } from '@angular/router';
+import { LogoComponent } from '../logo/logo.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, LogoComponent],
   template: `
     <header class="flex w-full justify-between">
-      <div class="logo">This would be the logo</div>
+      <app-logo class=" text-slate-400 dark:text-slate-200 size-16" />
       <div class="flex gap-4">
         <div class="grid items-center justify-center">
           <select
