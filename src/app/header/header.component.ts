@@ -2,20 +2,21 @@ import { Component, EventEmitter, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { EventType } from '@angular/router';
 import { LogoComponent } from '../logo/logo.component';
+import { ThemeToggleIconComponent } from '../theme-toggle-icon/theme-toggle-icon.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [FormsModule, LogoComponent],
+  imports: [FormsModule, LogoComponent, ThemeToggleIconComponent],
   template: `
     <header class="flex w-full justify-between">
-      <app-logo class=" text-slate-400 dark:text-slate-200 size-16" />
+      <app-logo class=" text-slate-800 dark:text-slate-200 size-16" />
       <div class="flex gap-4">
         <div class="grid items-center justify-center">
           <select
             name="fonts"
             id="fonts"
-            class="appearance-none row-start-1 col-start-1 text-xl bg-transparent cursor-pointer capitalize"
+            class="appearance-none font-bold row-start-1 col-start-1 text-xl bg-transparent cursor-pointer capitalize"
             [(ngModel)]="selectedFont"
             (change)="updateFont($event)"
           >
@@ -37,7 +38,12 @@ import { LogoComponent } from '../logo/logo.component';
           </svg>
         </div>
 
-        <button (click)="toggleDarkMode()">Toggle Dark mode</button>
+        <button (click)="toggleDarkMode()">
+          <app-theme-toggle-icon
+            class="size-8 text-slate-800 dark:text-slate-200"
+            [darkMode]="darkMode"
+          />
+        </button>
       </div>
     </header>
   `,
