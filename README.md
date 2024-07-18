@@ -1,27 +1,39 @@
 # Dictionary
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.4.
+This project is a dictionary word search application utilizing the public API from [DictionaryAPI](https://dictionaryapi.dev/). It was developed as part of a challenge on [Frontend Mentor](https://www.frontendmentor.io/challenges/dictionary-web-app-h5wwnyuKFL), aimed at practicing and improving my Angular skills, including creating services, making HTTP calls, and facilitating communication between components using `@Input` and `@Output`.
 
-## Development server
+## Live Preview
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+You can view the live preview of this project [here](https://dictionary-ten-self.vercel.app/).
 
-## Code scaffolding
+## Project Overview
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Technologies Used:** Angular, TypeScript, HTML, CSS (with Tailwind CSS).
+- **API Used:** [DictionaryAPI](https://dictionaryapi.dev/).
+- **Features In Progress:**
+  - **Error Handling:** Currently working on implementing proper error handling for API requests and displaying appropriate error messages to users.
+  - Status messages for loading states and success responses.
 
-## Build
+## Key Components
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+The project is structured into several components that manage different parts of the user interface and business logic:
 
-## Running unit tests
+- **AppComponent:** Main component containing the overall application structure and managing global state.
+- **WordComponent:** Component displaying the searched word and its definitions.
+- **SearchComponent:** Component for inputting and submitting search queries.
+- **DictionaryService:** Service handling API calls to DictionaryAPI.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Key Features
 
-## Running end-to-end tests
+1. **Word Search:**
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+   - Users can input a word into the search field and retrieve related definitions, examples, and pronunciations.
 
-## Further help
+2. **User Interface:**
+   - Clean and responsive design using Tailwind CSS for styling.
+   - **Dark Mode:** Ability to toggle between light and dark mode for different viewing preferences.
+   - **Font Selection:** Option to change between different fonts for displaying text.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Purpose
+
+This project serves as a practical exercise in Angular development, focusing on building a frontend application that interacts with a RESTful API, manages state between components, and ensures a smooth user experience for searching word definitions. It demonstrates proficiency in frontend development skills within the Angular framework and showcases the ability to integrate third-party APIs effectively.
