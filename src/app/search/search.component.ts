@@ -25,5 +25,6 @@ export class SearchComponent {
 
   onSubmit() {
     this.wordEvent.emit(this.word);
+    this.word = '';
   }
 }
