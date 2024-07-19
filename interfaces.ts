@@ -32,3 +32,13 @@ export interface Phonetic {
   sourceUrl?: string;
   license?: License;
 }
+
+export interface ErrorObject {
+  title: string;
+  message: string;
+  resolution: string;
+}
+
+export interface CustomErrorEvent extends ErrorEvent {
+  error: ErrorObject;
+}
