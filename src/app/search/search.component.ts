@@ -8,13 +8,13 @@ import { FormsModule } from '@angular/forms';
   template: `
     <form
       (submit)="onSubmit()"
-      class="w-full flex bg-slate-100 dark:bg-slate-700 border border-transparent rounded-xl outline-none text-2xl mx-auto p-3 focus:shadow-md transition ease-in duration-250"
+      class="w-full flex bg-slate-100 dark:bg-slate-700 border border-transparent rounded-xl outline-none text-2xl mx-auto p-3 focus:shadow-md"
     >
       <input
         [(ngModel)]="word"
         type="text"
         id="word"
-        class="w-full bg-slate-100 dark:bg-slate-700 border border-transparent rounded-xl outline-none text-2xl mx-auto"
+        class="w-full bg-slate-100 dark:bg-slate-700 border border-transparent rounded-xl outline-none text-2xl mx-auto "
         [ngModelOptions]="{ standalone: true }"
       />
       <button class="appearance-none" type="submit">
