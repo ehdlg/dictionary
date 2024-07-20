@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Dictionary } from '../../interfaces';
-import { map, Observable } from 'rxjs';
+import { catchError, EMPTY, map, Observable, of, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -12,8 +12,11 @@ export class DictionaryService {
   constructor(private http: HttpClient) {}
 
   get(word: string): Observable<Dictionary> {
-    return this.http
-      .get<Dictionary[]>(DictionaryService.API_URL + word)
-      .pipe(map(([data]) => data));
+    return this.http.get<Dictionary[]>(DictionaryService.API_URL + word).pipe(
+      map(([data]) => data),
+      catchError((error: ErrorEvent) => {
+        throw error;
+      })
+    );
   }
 }
