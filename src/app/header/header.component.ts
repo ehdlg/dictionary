@@ -104,7 +104,6 @@ export class HeaderComponent {
     const newFont = event.target.value;
 
     for (const value of Array.from(bodyClasses)) {
-      console.log(value, this.fontValues);
       if ((this.fontValues as string[]).includes(value)) {
         bodyClasses.replace(value, newFont);
 
