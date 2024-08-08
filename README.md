@@ -10,9 +10,6 @@ You can view the live preview of this project [here](https://dictionary-ten-self
 
 - **Technologies Used:** Angular, TypeScript, HTML, CSS (with Tailwind CSS).
 - **API Used:** [DictionaryAPI](https://dictionaryapi.dev/).
-- **Features In Progress:**
-  - **Error Handling:** Currently working on implementing proper error handling for API requests and displaying appropriate error messages to users.
-  - Status messages for loading states and success responses.
 
 ## Key Components
 
