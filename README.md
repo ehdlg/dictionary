@@ -1,5 +1,7 @@
 # Dictionary
 
+![Dictionary](https://i.imgur.com/p1pKrdE.png)
+
 This project is a dictionary word search application utilizing the public API from [DictionaryAPI](https://dictionaryapi.dev/). It was developed as part of a challenge on [Frontend Mentor](https://www.frontendmentor.io/challenges/dictionary-web-app-h5wwnyuKFL), aimed at practicing and improving my Angular skills, including creating services, making HTTP calls, and facilitating communication between components using `@Input` and `@Output`.
 
 ## Live Preview
